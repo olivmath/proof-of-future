@@ -58,7 +58,7 @@ sudo zypper install clang curl git openssl-devel llvm-devel libudev-devel
 > **Apple M1 ARM**
 > If you have an Apple M1 ARM system on a chip, make sure that you have Apple Rosetta 2
 > installed through `softwareupdate --install-rosetta`. This is only needed to run the
-> `protoc` tool during the build. The build itself and the target binaries would remain native.
+> `protoc` tool during the build. The build itself and the target binaries would remain native. if you dont have `protoc` install with `brew install protobuf`
 
 Open the Terminal application and execute the following commands:
 
