@@ -1,0 +1,3 @@
+[submodule "proof-of-future-front-end"]
+	path = proof-of-future-front-end
+	url = git@github.com:olivmath/proof-of-future-front-end.git
