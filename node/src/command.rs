@@ -1,14 +1,34 @@
-use crate::{
-	benchmarking::{inherent_benchmark_data, RemarkBuilder, TransferKeepAliveBuilder},
-	chain_spec,
-	cli::{Cli, Subcommand},
-	service,
+use {
+	crate::{
+		benchmarking::{
+			inherent_benchmark_data,
+			RemarkBuilder,
+			TransferKeepAliveBuilder,
+		},
+		chain_spec,
+		cli::{
+			Cli,
+			Subcommand,
+		},
+		service,
+	},
+	frame_benchmarking_cli::{
+		BenchmarkCmd,
+		ExtrinsicFactory,
+		SUBSTRATE_REFERENCE_HARDWARE,
+	},
+	node_template_runtime::{
+		Block,
+		EXISTENTIAL_DEPOSIT,
+	},
+	sc_cli::{
+		ChainSpec,
+		RuntimeVersion,
+		SubstrateCli,
+	},
+	sc_service::PartialComponents,
+	sp_keyring::Sr25519Keyring,
 };
-use frame_benchmarking_cli::{BenchmarkCmd, ExtrinsicFactory, SUBSTRATE_REFERENCE_HARDWARE};
-use node_template_runtime::{Block, EXISTENTIAL_DEPOSIT};
-use sc_cli::{ChainSpec, RuntimeVersion, SubstrateCli};
-use sc_service::PartialComponents;
-use sp_keyring::Sr25519Keyring;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {

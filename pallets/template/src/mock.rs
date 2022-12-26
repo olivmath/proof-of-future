@@ -1,10 +1,18 @@
-use crate as pallet_template;
-use frame_support::traits::{ConstU16, ConstU64};
-use frame_system as system;
-use sp_core::H256;
-use sp_runtime::{
-	testing::Header,
-	traits::{BlakeTwo256, IdentityLookup},
+use {
+	crate as pallet_template,
+	frame_support::traits::{
+		ConstU16,
+		ConstU64,
+	},
+	frame_system as system,
+	sp_core::H256,
+	sp_runtime::{
+		testing::Header,
+		traits::{
+			BlakeTwo256,
+			IdentityLookup,
+		},
+	},
 };
 
 type UncheckedExtrinsic = frame_system::mocking::MockUncheckedExtrinsic<Test>;

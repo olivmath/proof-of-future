@@ -7,12 +7,23 @@
 
 use std::sync::Arc;
 
-use jsonrpsee::RpcModule;
-use node_template_runtime::{opaque::Block, AccountId, Balance, Index};
-use sc_transaction_pool_api::TransactionPool;
-use sp_api::ProvideRuntimeApi;
-use sp_block_builder::BlockBuilder;
-use sp_blockchain::{Error as BlockChainError, HeaderBackend, HeaderMetadata};
+use {
+	jsonrpsee::RpcModule,
+	node_template_runtime::{
+		opaque::Block,
+		AccountId,
+		Balance,
+		Index,
+	},
+	sc_transaction_pool_api::TransactionPool,
+	sp_api::ProvideRuntimeApi,
+	sp_block_builder::BlockBuilder,
+	sp_blockchain::{
+		Error as BlockChainError,
+		HeaderBackend,
+		HeaderMetadata,
+	},
+};
 
 pub use sc_rpc_api::DenyUnsafe;
 
@@ -39,8 +50,16 @@ where
 	C::Api: BlockBuilder<Block>,
 	P: TransactionPool + 'static,
 {
-	use pallet_transaction_payment_rpc::{TransactionPayment, TransactionPaymentApiServer};
-	use substrate_frame_rpc_system::{System, SystemApiServer};
+	use {
+		pallet_transaction_payment_rpc::{
+			TransactionPayment,
+			TransactionPaymentApiServer,
+		},
+		substrate_frame_rpc_system::{
+			System,
+			SystemApiServer,
+		},
+	};
 
 	let mut module = RpcModule::new(());
 	let FullDeps { client, pool, deny_unsafe } = deps;
