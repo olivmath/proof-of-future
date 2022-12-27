@@ -1,6 +1,6 @@
 ./target/release/node-template key insert \
-    --base-path /blockchain/node01 \
-  --chain customSpecRaw.json \
+  --base-path /blockchain/node01 \
+  --chain chainSpecRaw.json \
   --scheme Sr25519 \
   --suri <your-secret-seed> \
   --password-interactive \
@@ -8,7 +8,7 @@
 
 ./target/release/node-template key insert \
   --base-path /blockchain/node01 \
-  --chain customSpecRaw.json \
+  --chain chainSpecRaw.json \
   --scheme Ed25519 \
   --suri <your-secret-key> \
   --password-interactive \
