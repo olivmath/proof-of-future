@@ -1,12 +1,12 @@
 ./target/release/node-template \
-  --base-path ./blockchain/node01 \
+  --base-path ./blockchain/node04 \
   --chain ./chainSpecRaw.json \
-  --port 30333 \
-  --ws-port 9944 \
-  --rpc-port 9933 \
+  --port 30334 \
+  --ws-port 9945 \
+  --rpc-port 9936 \
   --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
   --validator \
   --rpc-methods Unsafe \
-  --name MyNode02 \
+  --name MyNode03 \
   --bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWBuDKiotxYd2eranH4PmxuSbiLWDdQXwFhZokKQCTYzJ7 \
   --password-interactive
