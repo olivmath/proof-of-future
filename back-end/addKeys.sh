@@ -7,7 +7,7 @@
   --key-type aura
 
 ./target/release/node-template key insert \
-  --base-path /blockchain/node01 \
+  --base-path ./blockchain/node01 \ 
   --chain chainSpecRaw.json \
   --scheme Ed25519 \
   --suri <your-secret-key> \
