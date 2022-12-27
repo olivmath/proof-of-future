@@ -1,5 +1,5 @@
 ./target/release/node-template key insert \
-  --base-path /blockchain/node01 \
+  --base-path ./blockchain/node01 \
   --chain chainSpecRaw.json \
   --scheme Sr25519 \
   --suri <your-secret-seed> \
