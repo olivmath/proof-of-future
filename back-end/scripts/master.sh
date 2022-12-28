@@ -1,6 +1,6 @@
 ./target/release/node-template \
   --base-path ./blockchain/node01 \
-  --chain ./chainSpecRaw.json \
+  --chain ./config/chainSpecRaw.json \
   --port 30333 \
   --ws-port 9944 \
   --rpc-port 9933 \

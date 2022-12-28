@@ -1,6 +1,6 @@
 ./target/release/node-template \
   --base-path ./blockchain/node04 \
-  --chain ./chainSpecRaw.json \
+  --chain ./config/chainSpecRaw.json \
   --port 30334 \
   --ws-port 9945 \
   --rpc-port 9936 \
@@ -8,5 +8,5 @@
   --validator \
   --rpc-methods Unsafe \
   --name MyNode03 \
-  --bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWBuDKiotxYd2eranH4PmxuSbiLWDdQXwFhZokKQCTYzJ7 \
+  --bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWGMVQgenccXYLsU6iey7GfQVi9a884D1j2oGEc8wvuBqL \
   --password-interactive
